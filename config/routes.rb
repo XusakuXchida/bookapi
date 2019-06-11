@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :books
-
+  resources :books, except: [:update]
+  post 'books/:id' => 'books#update'
 end
