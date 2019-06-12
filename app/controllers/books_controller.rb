@@ -31,7 +31,7 @@ class BooksController < ApplicationController
   def destroy
     book = Book.find(params[:id])
     book.destroy
-    render json: { status: 'SUCCESS', message: 'delete book', data: book }
+    render json: { message: 'SUCCESS delete book', data: book }
   end
 
   private
